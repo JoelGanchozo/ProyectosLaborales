@@ -1,0 +1,1167 @@
+//macro para pedidos normales
+
+' NORMAL Macro
+'
+
+
+If Range("B5") <> "" Then
+' VALIDACION DE DATOS Macro
+If Range("J1") = "NORMAL" Then
+' VALIDACION Macro
+    Sheets("BASE").Select
+    'Cells.Select
+    Range("J5:J503").Select
+    'CARACTERES ESPECIALES PARA LA Ñ
+    Selection.Replace What:="Ã'", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+    Selection.Replace What:="Ã‘", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+
+    'caracteres generales
+    Selection.Replace What:="     ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="    ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="   ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="  ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="!", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="""", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="-", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="­", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="–", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="$", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="%", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="&", Replacement:=" Y ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="( )", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="(", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=")", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=",", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=".", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="/", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=":", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=";", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="@", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="[", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="\", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="]", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="^", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ˆ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="_", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="`", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="{", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="|", Replacement:="", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="}", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="~", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¦", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¨", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¯", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="´", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¿", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="˜", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‘", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="’", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="”", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="„", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‹", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="›", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="+", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="<", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="=", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="±", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="«", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="»", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="×", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="÷", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¢", Replacement:="N ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="£", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¤", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¥", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="§", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="©", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¬", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="®", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="°", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="µ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¶", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="·", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="†", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="•", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="…", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‰", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="€", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¾", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¹", Replacement:="1", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="²", Replacement:="2", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="³", Replacement:="3", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="à", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ç", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="É", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="È", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ƒ", Replacement:="F", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ì", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Î", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ï", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="í", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ì", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="î", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ï", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="o", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ß", Replacement:="B", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="™", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="e", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ž", Replacement:="Z", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+
+Sheets("BASE").Select
+    Range("K5:K503").Select
+    'CARACTERES ESPECIALES PARA LA Ñ
+    Selection.Replace What:="Ã'", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+    Selection.Replace What:="Ã‘", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+
+    'caracteres generales
+    Selection.Replace What:="     ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="    ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="   ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="  ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="!", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="""", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="-", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="­", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="–", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="$", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="%", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="&", Replacement:=" Y ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="( )", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="(", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=")", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=",", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=".", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="/", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=":", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=";", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="@", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="[", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="\", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="]", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="^", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ˆ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="_", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="`", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="{", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="|", Replacement:="", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="}", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="~", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¦", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¨", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¯", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="´", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¿", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="˜", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‘", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="’", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="”", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="„", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‹", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="›", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="+", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="<", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="=", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="±", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="«", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="»", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="×", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="÷", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¢", Replacement:="N ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="£", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¤", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¥", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="§", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="©", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¬", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="®", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="°", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="µ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¶", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="·", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="†", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="•", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="…", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‰", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="€", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¾", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¹", Replacement:="1", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="²", Replacement:="2", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="³", Replacement:="3", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="à", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ç", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="É", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="È", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ƒ", Replacement:="F", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ì", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Î", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ï", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="í", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ì", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="î", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ï", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="o", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ß", Replacement:="B", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="™", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="e", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ž", Replacement:="Z", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+
+Sheets("BASE").Select
+    Range("N5:N503").Select
+    'CARACTERES ESPECIALES PARA LA Ñ
+    Selection.Replace What:="Ã'", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+    Selection.Replace What:="Ã‘", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+
+    'caracteres generales
+    Selection.Replace What:="     ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="    ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="   ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="  ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="!", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="""", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="-", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="­", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="–", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="$", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="%", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="&", Replacement:=" Y ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="( )", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="(", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=")", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=",", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=".", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="/", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=":", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=";", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="@", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="[", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="\", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="]", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="^", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ˆ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="_", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="`", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="{", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="|", Replacement:="", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="}", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="~", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¦", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¨", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¯", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="´", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¿", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="˜", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‘", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="’", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="”", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="„", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‹", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="›", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="+", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="<", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="=", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="±", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="«", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="»", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="×", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="÷", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¢", Replacement:="N ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="£", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¤", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¥", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="§", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="©", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¬", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="®", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="°", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="µ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¶", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="·", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="†", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="•", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="…", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‰", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="€", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¾", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¹", Replacement:="1", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="²", Replacement:="2", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="³", Replacement:="3", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="à", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ç", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="É", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="È", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ƒ", Replacement:="F", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ì", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Î", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ï", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="í", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ì", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="î", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ï", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="o", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ß", Replacement:="B", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="™", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="e", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ž", Replacement:="Z", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+
+Sheets("BASE").Select
+    Range("P5:P503").Select
+    'CARACTERES ESPECIALES PARA LA Ñ
+    Selection.Replace What:="Ã'", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+    Selection.Replace What:="Ã‘", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+
+    'caracteres generales
+    Selection.Replace What:="     ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="    ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="   ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="  ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="!", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="""", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="-", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="­", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="–", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="$", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="%", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="&", Replacement:=" Y ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="( )", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="(", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=")", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=",", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=".", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="/", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=":", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=";", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="@", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="[", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="\", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="]", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="^", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ˆ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="_", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="`", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="{", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="|", Replacement:="", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="}", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="~", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¦", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¨", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¯", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="´", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¿", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="˜", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‘", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="’", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="”", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="„", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‹", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="›", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="+", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="<", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="=", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="±", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="«", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="»", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="×", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="÷", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¢", Replacement:="N ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="£", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¤", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¥", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="§", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="©", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¬", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="®", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="°", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="µ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¶", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="·", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="†", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="•", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="…", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‰", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="€", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¾", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¹", Replacement:="1", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="²", Replacement:="2", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="³", Replacement:="3", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="à", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ç", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="É", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="È", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ƒ", Replacement:="F", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ì", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Î", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ï", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="í", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ì", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="î", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ï", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="o", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ß", Replacement:="B", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="™", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="e", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ž", Replacement:="Z", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+
+Sheets("BASE").Select
+    Range("O5:O503").Select
+    'CARACTERES ESPECIALES PARA LA Ñ
+    Selection.Replace What:="Ã'", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+    Selection.Replace What:="Ã‘", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+
+    'caracteres generales
+    Selection.Replace What:="     ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="    ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="   ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="  ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="!", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="""", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="-", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="­", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="–", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="$", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="%", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="&", Replacement:=" Y ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="( )", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="(", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=")", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=",", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=".", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="/", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=":", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=";", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="@", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="[", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="\", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="]", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="^", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ˆ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="_", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="`", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="{", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="|", Replacement:="", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="}", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="~", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¦", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¨", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¯", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="´", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¿", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="˜", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‘", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="’", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="”", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="„", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‹", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="›", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="+", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="<", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="=", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="±", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="«", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="»", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="×", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="÷", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¢", Replacement:="N ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="£", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¤", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¥", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="§", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="©", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¬", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="®", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="°", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="µ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¶", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="·", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="†", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="•", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="…", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‰", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="€", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¾", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¹", Replacement:="1", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="²", Replacement:="2", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="³", Replacement:="3", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="à", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ç", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="É", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="È", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ƒ", Replacement:="F", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ì", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Î", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ï", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="í", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ì", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="î", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ï", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="o", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ß", Replacement:="B", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="™", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="e", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ž", Replacement:="Z", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+
+
+Sheets("BASE").Select
+    Range("AG5:AG503").Select
+    'CARACTERES ESPECIALES PARA LA Ñ
+    Selection.Replace What:="Ã'", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+    Selection.Replace What:="Ã‘", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False '
+
+    'caracteres generales
+    Selection.Replace What:="     ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="    ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="   ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="  ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="!", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="""", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="'", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="-", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="­", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="–", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="#", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="$", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="%", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="&", Replacement:=" Y ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="( )", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="(", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=")", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=",", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=".", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="/", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=":", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:=";", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="@", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="[", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="\", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="]", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="^", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ˆ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="_", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="`", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="{", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="|", Replacement:="", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="}", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="~", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¦", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¨", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¯", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="´", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¸", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¿", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="˜", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‘", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="’", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="”", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="„", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‹", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="›", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="+", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="<", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="=", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="±", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="«", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="»", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="×", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="÷", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¢", Replacement:="N ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="£", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¤", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¥", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="§", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="©", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¬", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="®", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="°", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="µ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¶", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="·", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="†", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="•", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="…", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="‰", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="€", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¼¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="½¡", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¾", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="¹", Replacement:="1", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="²", Replacement:="2", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="³", Replacement:="3", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ª", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="á", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="à", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="À", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="â", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ä", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ã", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="å", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Æ", Replacement:="A", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ç", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ð", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ð", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="É", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="é", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="È", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ê", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ë", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="è", Replacement:="E", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ƒ", Replacement:="F", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Í", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ì", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Î", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ï", Replacement:="I", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    'Selection.Replace What:="í", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ì", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="î", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ï", Replacement:="i", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ñ", Replacement:="N", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="º", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ó", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ò", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ô", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ö", Replacement:="o", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ö", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="õ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ø", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="œ", Replacement:="O", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="š", Replacement:="S", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ß", Replacement:="B", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="þ", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="™", Replacement:=" ", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="e", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ú", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ú", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ù", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Û", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="û", Replacement:="u", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ü", Replacement:="U", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ý", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="ÿ", Replacement:="Y", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+    Selection.Replace What:="Ž", Replacement:="Z", LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False
+     
+     End If
+    
+    Sheets("PLANTILLA").Select
+    Selection.AutoFilter
+    ActiveSheet.Range("$A$1:$AQ$501").AutoFilter Field:=1, Criteria1:="<>"
+    Range("A1:AG1").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    Workbooks.Add
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Range("A1").Select
+    Windows("PruebaJOEL-GUIAS TRAMACO V2 2023").Activate
+    Selection.End(xlUp).Select
+    Application.CutCopyMode = False
+    Selection.AutoFilter
+    Sheets("BASE").Select
+    Range("A5").Select
+'
+ End If
+End Sub
